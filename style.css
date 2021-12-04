@@ -13,6 +13,8 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     background-color: #4d59fb;
+    padding: 10px;
+    -webkit-tap-highlight-color: transparent;
 }
 
 ::selection {
@@ -70,14 +72,15 @@ input:focus~.search-icon {
     font-size: 22px;
     color: rgb(139, 134, 134);
     position: absolute;
-    right: 17px;
-    top: 17px;
+    right: 13px;
+    top: 9px;
     cursor: pointer;
     visibility: hidden;
+    padding: 7px;
 }
 
 .info-text {
-    font-size: 13px;
+    font-size: 14px;
     color: #787575;
 }
 
@@ -89,7 +92,7 @@ input:focus~.search-icon {
     height: 0;
     opacity: 0;
     overflow-y: hidden;
-    transition: all 0.2s ease;
+    transition: all 0.2s linear;
 }
 
 .list-result li {
@@ -121,6 +124,7 @@ input:focus~.search-icon {
 .word i {
     color: #989898;
     cursor: pointer;
+    padding: 7px;
 }
 
 .content {
@@ -129,9 +133,17 @@ input:focus~.search-icon {
 }
 
 .content::-webkit-scrollbar {
-    width: 0px;
-    -webkit-appearance: none;
-    display: none;
+    width: 5px;
+}
+
+.content::-webkit-scrollbar-track {
+    background-color: #bbbbc0;
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background-color: #4d59fb;
+    border-radius: 3px;
 }
 
 .content .details p {

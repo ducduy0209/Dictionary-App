@@ -29,7 +29,7 @@ const renderData = (data, word) => {
     $('.meaning span').innerText = meaning;
     $('.example span').innerText = example;
 
-    if (synonyms.length <= 0) {
+    if (synonyms.length <= 0 || !synonyms) {
         synonymsList.parentElement.style.display = 'none';
     } else {
         synonymsList.parentElement.style.display = 'block';
@@ -59,6 +59,14 @@ const fetchAPI = async(word) => {
     }
 }
 
+// Set default when click removeBtn
+const defaultStatus = () => {
+    textInfo.innerHTML = 'Type any existing word and press enter to get meaning, example, synonyms, etc.';
+    container.classList.remove('active');
+    searchInput.value = '';
+    removeBtn.style.visibility = "hidden";
+}
+
 // Event press key Enter to search
 searchInput.addEventListener('keypress', e => {
     removeBtn.style.visibility = "visible";
@@ -68,13 +76,15 @@ searchInput.addEventListener('keypress', e => {
     }
 })
 
-// Event click removeBtn to resest
-removeBtn.addEventListener('click', () => {
-    textInfo.innerHTML = 'Type any existing word and press enter to get meaning, example, synonyms, etc.';
-    container.classList.remove('active');
-    searchInput.value = '';
-    removeBtn.style.visibility = "hidden";
+// When value input empty => hide removeBtn
+searchInput.addEventListener('input', e => {
+    if (e.target.value == '') {
+        removeBtn.style.visibility = "hidden";
+    }
 });
+
+// Event click removeBtn to resest
+removeBtn.addEventListener('click', defaultStatus);
 
 // Event click audio
 volumeBtn.addEventListener('click', () => {
