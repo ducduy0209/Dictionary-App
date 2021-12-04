@@ -12,9 +12,15 @@ body {
     align-items: center;
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
-    background-color: #4d59fb;
+    background: rgb(77, 89, 251);
+    background: linear-gradient(90deg, rgba(77, 89, 251, 1) 37%, rgba(45, 253, 181, 1) 85%);
     padding: 10px;
     -webkit-tap-highlight-color: transparent;
+}
+
+::-moz-selection {
+    background-color: #4d59fb;
+    color: #fff;
 }
 
 ::selection {
@@ -49,6 +55,26 @@ input {
     padding: 0 40px;
     outline-color: #4d59fb;
     border-radius: 6px;
+}
+
+input::-webkit-input-placeholder {
+    color: rgb(185, 181, 181);
+    font-weight: 500;
+}
+
+input::-moz-placeholder {
+    color: rgb(185, 181, 181);
+    font-weight: 500;
+}
+
+input:-ms-input-placeholder {
+    color: rgb(185, 181, 181);
+    font-weight: 500;
+}
+
+input::-ms-input-placeholder {
+    color: rgb(185, 181, 181);
+    font-weight: 500;
 }
 
 input::placeholder {
@@ -111,20 +137,20 @@ input:focus~.search-icon {
 }
 
 .word .details p {
-    font-size: 22px;
+    font-size: 23px;
     color: #000;
     font-weight: 500;
 }
 
 .word .details span {
-    font-size: 12px;
+    font-size: 13px;
     color: #989898;
 }
 
 .word i {
     color: #989898;
     cursor: pointer;
-    padding: 7px;
+    padding: 8px;
 }
 
 .content {
@@ -153,7 +179,7 @@ input:focus~.search-icon {
 }
 
 .content .details span {
-    font-size: 14px;
+    font-size: 15px;
     color: #7E7E7E;
 }
 
