@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.4/css/pro.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>English Dictionary</header>
+        <div class="box-search">
+            <input type="text" required placeholder="Search a word" id="input" spellcheck="true">
+            <i class="fas fa-search search-icon"></i>
+            <i class="fal fa-times close-icon"></i>
+        </div>
+        <p class="info-text">
+            Type any existing word and press enter to get meaning, example, synonyms, etc.
+        </p>
+        <ul class="list-result">
+            <li class="word">
+                <div class="details">
+                    <p></p>
+                    <span></span>
+                </div>
+                <i class="fas fa-volume-up"></i>
+            </li>
+            <div class="content">
+                <li class="meaning">
+                    <div class="details">
+                        <p>Meaning</p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="example">
+                    <div class="details">
+                        <p>Example</p>
+                        <span></span>
+                    </div>
+                </li>
+                <li class="synonyms">
+                    <div class="details">
+                        <p>Synonyms</p>
+                        <div class="list">
+                        </div>
+                    </div>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
